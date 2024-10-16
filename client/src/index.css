@@ -1,0 +1,388 @@
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap');
+
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+h2{
+    font-style:italic;
+}
+
+* {
+    font-family: 'Readex-Pro', sans-serif;
+}
+.primary-title{
+    font-size: 90px;
+    color: rgba(255,255,255);
+
+}
+
+.primary-button {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 15px;
+    background: linear-gradient(45deg, rgb(254, 48, 114), rgb(255, 89, 64));
+    padding: 12px 30px;
+    border-radius: 30px;
+    border: none;
+    margin: 10px;
+}
+
+.primary-button:hover {
+    background: linear-gradient(260deg, rgb(254, 48, 114), rgb(255, 89, 64));
+
+}
+.secondary-button{
+    color:rgb(121,119,119);
+    background-color: rgb(255, 255, 255);
+    font-weight:500;
+    font-size:15px;
+    text-transform: uppercase;
+    padding:12px 30px;
+    border-radius: 30px;
+    border:solid 2px rgb(121,119,199);
+    margin:6px;
+
+
+}
+.secondary-button:hover{
+    color:rgb(48, 48, 48);
+    border:solid 2px rgb(48,48,48);
+
+}
+
+
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav .nav-button {
+    color: rgb(254, 48, 114);
+    background-color: rgb(255, 255, 255);
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    margin: 10px;
+
+
+
+}
+nav .nav-button:disabled{
+    background-color: rgb(189,180,180);
+    color:rgb(160, 38, 85);
+}
+
+nav .logo-container {
+    width: 170px;
+    margin: 15px;
+}
+
+nav .logo-container .logo {
+    width: 100%;
+}
+
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.65)0%,
+            rgba(0, 0, 0, 0)100%
+            
+            ),
+            url('images/opetTinder.webp')
+   
+
+}
+.home{margin-top: 30vh;}
+
+.auth-modal{
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    margin-left:auto;
+    margin-right:auto;
+    max-width: 360px;
+    height: 600px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 40px;
+    
+
+    
+    
+}
+.auth-modal .close-icon{
+    float:right;
+}
+.auth-modal form{
+    display:flex;
+    flex-direction:column;
+
+}
+.auth-modal input[type=password]
+.auth-modal input[type=email]{
+    padding:8px;
+    margin:8px;
+    font-size:17px;
+}
+.onboarding{
+    border-top: solid 1px rgb(154,154,154);
+    
+
+}
+.onboarding form{
+    display: flex;
+    justify-content: center;
+
+}
+.onboarding form section{
+    display:flex;
+    flex-direction:column;
+    padding:20px;
+    width:35%;
+    text-align:start;
+
+}
+.onboarding form input{
+    padding:30px 15px;
+    margin:10px 0;
+    font-size:15px;
+    border:solid 2px rgb(219,219,219);
+    border-radius:10px;
+
+
+}
+.onboarding-form input::-webkit-outer-spin-button,
+.onboarding-form input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin:0;
+}
+.onboarding form label{
+    margin:10px 0;
+}
+
+.onboarding form .multiple-input-container{
+    display:flex;
+    flex-direction: row;
+}
+.onboarding form .multiple-input-container input{
+    margin-right:10px;
+
+}
+.onboarding form .multiple-input-container label{
+    padding: 10px;
+    border: solid 2px rgb(144,144,144);
+    border-radius:10px;
+    transition: all 0.3s;
+    margin-right:10px;
+}
+.onboarding form  input[type="radio"]{
+    display:none;
+
+}
+.onboarding form  input[type="number"]{
+    width:10%;
+}
+.onboarding form  input[type="radio"]:checked + label{
+    border:solid 2px rgb(221,39,22);
+}
+.onboarding form  input[type="submit"]:hover{
+    background-color:rgb(235,235,235);
+
+}
+.onboarding form  input[type="submit"]:active{
+    background-color:rgb(226,115,155);
+    
+}
+.onboarding form .photo-container img{
+    width:100%;
+
+}
+.dashboard {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dashboard .swipe-container {
+    
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.swipe {
+    position: absolute;
+    z-index: 2;
+}
+
+.dashboard .card-container {
+    width: 400px;
+    height: 650px;
+    
+}
+
+.card {
+    width: 400px;
+    height: 650px;
+    border-radius: 30px;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.dashboard .swipe-info {
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+}
+.chat-container{
+    display: flex; /* Dodano za fleksibilno raspoređivanje unutar kontejnera */
+    flex-direction: column; /* Rasporedi dječje elemente u stupcu */
+    height: 100vh; /* Postavi visinu kontejnera na visinu prozora */
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+                rgba(0, 0, 0, 0.08) 0px 0px 0px 0px;
+    width: 30%;
+    text-align: left;
+    z-index: 1;
+    border-radius: 8px; /* Zaobljeni kutovi */
+    overflow: hidden; /* Sakrij dijelove koji izlaze iz okvira */
+}
+
+
+.chat-container .chat-container-header{
+    background:linear-gradient(45deg, rgb(254, 48, 114), rgb(255, 89, 64));
+    height: 100px;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+
+
+}
+.chat-container .option{
+    border:none;
+    background-color: #fff;
+    border-bottom:solid 4px rgb(243,33,33);
+    font-size:20px;
+    margin:2px;
+    padding:10px;
+
+}
+.chat-container .option:disabled{
+    border-bottom:solid 4px rgb(187,187,187);
+}
+.chat-container .profile,
+.chat-container .log-out-icon{
+    padding:20px;
+    display:flex;
+    align-items: center;
+    color:rgb(255,255,255);
+
+}
+.img-container{
+    height:30px;
+    width: 30px;
+    border-radius:15px;
+    overflow: hidden;
+    margin:10px;
+
+}
+
+img-container .img{
+    width:100%;
+
+}
+.chat-display,
+.matches-display{
+    flex: 1; /* Omogućuje chat display da zauzima sav dostupni prostor */
+    overflow-y: auto; /* Dodano za skrolanje ako je sadržaj prevelik */
+    padding: 10px; /* Razmak unutar chat display-a */
+    background-color: #f9f9f9; /* Svijetla pozadina za chat display */
+
+}
+.chat-input{
+    display: flex; /* Rasporedi elemente unutar chat inputa */
+    padding: 10px; /* Razmak unutar chat inputa */
+    background-color: #fff; /* Bijela pozadina za chat input */
+    border-top: 1px solid #ddd; /* Razdvajanje od chat display-a */
+
+}
+.chat-input input {
+    flex: 1; /* Uvećaj ulazno polje da zauzima sav prostor */
+    padding: 10px; /* Razmak unutar ulaznog polja */
+    border: 1px solid #ddd; /* Rub ulaznog polja */
+    border-radius: 5px; /* Zaobljeni kutovi */
+    margin-right: 10px; /* Razmak između ulaznog polja i gumba */
+}
+
+.chat-input button {
+    padding: 10px 15px; /* Unutarnji razmak gumba */
+    background-color: #007bff; /* Plava boja gumba */
+    color: white; /* Bijela boja teksta na gumbu */
+    border: none; /* Bez obruba */
+    border-radius: 5px; /* Zaobljeni kutovi */
+    cursor: pointer; /* Promjena pokazivača pri prelasku preko gumba */
+    transition: background-color 0.3s; /* Animacija prilikom prelaska miša */
+}
+
+
+
+.instructions {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 150px;
+  }
+  
+  .left-instruction, .right-instruction {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #333;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    
+  }
+  
+  .left-instruction span, .right-instruction span {
+    font-size: 2rem;
+    display: block;
+    margin-top: 5px;
+    font-weight: 600;
+    
+  }
+  
+  .left-instruction {
+    color: red; /* Boja za lijevo */
+  }
+  
+  .right-instruction {
+    color: green; /* Boja za desno */
+  }
+  .chatbot {
+    position: fixed; /* Fiksna pozicija */
+    bottom: 20px; /* Razmak od dna */
+    right: 20px; /* Razmak od desnog ruba */
+    width: 300px; /* Širina chatbota */
+    z-index: 1000; /* Osigurajte da se chatbot prikazuje iznad ostalih elemenata */
+}
+
+
+  
+
+  
